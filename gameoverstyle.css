@@ -1,0 +1,142 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+
+body{
+    background-image: url('./srcImages/ab3ca36123df6ae3934e07ca85699836.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 97.5vh;
+}
+
+#secondmain{
+    
+    width: 50vw;
+    height: 30vw;
+    margin-left: 10vw;
+    /* background-color: rgba(28, 10, 10, 0.705); */
+    border-radius: 10px;
+}
+
+#thanks{
+    font-family:'Dancing Script';
+    font-size:5vw;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 6px;
+    
+    border-radius: 10px;
+    animation: floating2 3s ease-in-out infinite;
+    color: rgb(191, 245, 56);
+    text-align: center;
+    animation: glow1 1.5s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px rgb(235, 235, 16), 0 0 20px #a5ea60, 0 0 30px #ebd3e3, 0 0 40px #f9f2f6, 0 0 50px #e2cdd7, 0 0 60px #decbd5, 0 0 70px #aea6ab;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #1f1b1b, 0 0 30px #2d2127, 0 0 40px #241f22, 0 0 50px #0f0a0c, 0 0 60px #391427, 0 0 70px #f9f3f6, 0 0 80px #ede0e7;
+    }
+  }
+
+
+#playagain{
+    display: flex;
+    justify-content: center;
+    color:beige;
+    font-family:'Dancing Script';
+    font-size: 3vw;
+    font-weight: 900;
+    padding-top: 12vw;
+    animation: floating1 3s ease-in-out infinite;
+
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    font-family:'Dancing Script';
+    font-size: 3vw;
+    font-weight: 900;
+    padding-top: 2vw;
+    animation: floating1 3s ease-in-out infinite;
+}
+
+#playagaini:hover{
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  #menui:hover{
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  @keyframes floating1{
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(14px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating2{
+  0% {
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(5px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+#myname{
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Dancing Script';
+  animation: glow 1s ease-in-out infinite alternate;
+  font-size: 3vw;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}

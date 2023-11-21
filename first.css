@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+body{
+    background-image: url('./srcImages/tumblr_b1667cccdca601a7d6db963e19820247_fad1bca1_500.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97.5vh;
+}
+
+#gamename{
+    font-family: 'Dancing Script';
+    font-weight: 600;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 6px;
+    border-radius: 10px;
+   
+    color: rgb(149, 251, 17);
+    text-align: center;
+    opacity: 200%;
+    padding-bottom: 6vw;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
+    }
+    
+  }
+
+
+  @keyframes floating2{
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
+
+  #inputname{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    animation: floating2 4s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+  }
+  #nameenter{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    animation: floating2 4s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+  }
+
+  #name{
+    border-radius: 8px 3px 8px 3px;
+    background-color: rgba(37, 33, 33, 0.5) ;
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: bisque;
+    font-style: italic;
+  }
+
+  #buttonout{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw ;
+    animation: floating2 4s ease-in-out infinite;
+  }
+
+  #button{
+    background-color: rgba(29, 28, 27, 0.8);
+    font-family: 'Dancing Script';
+    font-weight: 600;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 2.5vw;
+    padding: 5px;
+    color: wheat;
+    border-radius: 5px;
+    width: 8vw;
+  }
+
+  #button:hover{
+    background-color: rgb(236, 217, 182,0.8);
+    color: #1a1819;
+    animation: none;
+  }
