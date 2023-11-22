@@ -26,7 +26,7 @@ const playSwordSound = ()=>{
 
 }
 
-var bomb=10;
+var bomb=5;
 
 //Using Visibility change to prevent rendering balls when the tab is inactive
 document.addEventListener('visibilitychange', () => {

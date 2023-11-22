@@ -6,24 +6,41 @@
     <title>index</title>
     <link rel="stylesheet" href="./first.css">
 </head>
-<body><div id="outer">
-    <div id="main">
-        <div id="gamename">
-        Ball Ninja
+<body>
+    <!-- I have added multiple divs , because in outermost div we can give 
+    display flex so that all our imformation can be aligned at centermost -->
+    <div id="outer">
+        <div id="main">
+            <div id="gamename">
+            Ball Ninja
             </div>
-   <div id="namesection">
-    <div id="inputname">
-     Your Nickname <br></div>
-    <div id="nameenter">
-    <input type="text" name="name" id="name">
-    </div>
-    <div id="buttonout">
-    <button id="button">Enter</button>
-    </div>
-</div>
-</div>
-</div>
+        <div id="namesection">
+            <div id="inputname">
+                Player Name <br>
+            </div>
+        <div id="nameenter">
+            <!-- taking username from player -->
+        <input type="text" name="name" id="name" value="">
+        </div>
+        <div id="namesectiontwo">
+            <div id="inputnametwo">
+                Your Nickname <br>
+            </div>
+        <div id="nameentertwo">
+            <!-- taking nickname from player -->
+        <input type="text" name="name" id="nametwo" value="">
+        </div>
 
+        <div id="buttonout">
+        <!-- making a button to save the name and for going to next slide -->
+        <button id="button">
+            Enter
+        </button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- linking our js file -->
     <script src="./first.js"></script>
 </body>
 </html>

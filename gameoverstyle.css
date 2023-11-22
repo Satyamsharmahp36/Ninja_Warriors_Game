@@ -1,7 +1,7 @@
+/* imorting different fonts from google fonts */
 
   @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&family=Roboto+Mono:ital,wght@1,300&display=swap');
-
 
 body{
     background-image: url('./srcImages/ab3ca36123df6ae3934e07ca85699836.gif');
@@ -33,7 +33,6 @@ body{
     justify-content: center;
     margin: 10px;
     padding: 6px;
-    
     border-radius: 10px;
     animation: floating2 3s ease-in-out infinite;
     color: rgb(191, 245, 56);
@@ -41,7 +40,9 @@ body{
     animation: glow1 1.5s ease-in-out infinite alternate;
   }
   
-  @-webkit-keyframes glow1 {
+/* taking this glow webkit keyframe from w3 schools but i have changed text shadows  */
+
+  @keyframes glow1 {
     from {
       text-shadow: 0 0 10px rgb(235, 235, 16), 0 0 20px #a5ea60, 0 0 30px #ebd3e3, 0 0 40px #f9f2f6, 0 0 50px #e2cdd7, 0 0 60px #decbd5, 0 0 70px #aea6ab;
     }
@@ -51,6 +52,7 @@ body{
     }
   }
 
+/* using keyframes in animation */
 
 #playagain{
     display: flex;
@@ -61,7 +63,6 @@ body{
     font-weight: 900;
     padding-top: 12vw;
     animation: floating1 3s ease-in-out infinite;
-
 }
 
 #menu{
@@ -81,7 +82,9 @@ body{
     animation: glow 1s ease-in-out infinite alternate;
   }
   
-  @-webkit-keyframes glow {
+/* making another new glow keyframe */
+
+  @keyframes glow {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
@@ -97,15 +100,7 @@ body{
     animation: glow 1s ease-in-out infinite alternate;
   }
   
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-  }
+ /* making a floating keyframe to use in animmations */
   @keyframes floating1{
     0% {
         transform: translateY(0);
@@ -139,4 +134,24 @@ body{
   position: fixed;
   bottom: 20px;
   right: 10px;
+}
+
+/* media query for making it responsive */
+
+@media(max-width:600px){
+  #thanks{
+    font-size: 10vw;
+  }
+  #playagaini , #menu{
+    font-size: 5.5vw;
+  }
+  #main{
+    align-items: flex-start;
+  }
+  #myname{
+    font-size: 5vw;
+  }
+  #secondmain{
+    padding-top: 29vw;
+  }
 }

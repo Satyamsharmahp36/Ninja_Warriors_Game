@@ -1,10 +1,14 @@
+/* Importing font for google  */
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+
+/* setting background image  */
 body{
     background-image: url('./srcImages/tumblr_b1667cccdca601a7d6db963e19820247_fad1bca1_500.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+ /* Making correct alignment for our "outer" div  */
 #outer{
     display: flex;
     justify-content: center;
@@ -12,6 +16,7 @@ body{
     height: 97.5vh;
 }
 
+ /* Styling our Game Name , and giving animations to it */
 #gamename{
     font-family: 'Dancing Script';
     font-weight: 600;
@@ -23,16 +28,16 @@ body{
     margin: 10px;
     padding: 6px;
     border-radius: 10px;
-   
     color: rgb(149, 251, 17);
     text-align: center;
     opacity: 200%;
     padding-bottom: 6vw;
     animation: glow 1s ease-in-out infinite alternate;
-    
   }
-  
-  @-webkit-keyframes glow {
+ 
+  /* taken this Glow keyframe  from W3 schools , but there is change in "form text shandow and to text shadow */
+
+  @keyframes glow {
     from {
       text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
     }
@@ -40,9 +45,9 @@ body{
     to {
       text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
     }
-    
   }
 
+/* making keyframe for animation  */
 
   @keyframes floating2{
     0% {
@@ -54,8 +59,10 @@ body{
     100%{
         transform: translateY(0);
     }
+
   }
 
+  /* Making styling of our input option */
   #inputname{
     font-family: 'Dancing Script';
     display: flex;
@@ -65,6 +72,8 @@ body{
     padding-bottom: 1vw;
     font-size: 3vw;
   }
+
+ /* add keyframe in this floating animations */
   #nameenter{
     font-family: 'Dancing Script';
     display: flex;
@@ -85,13 +94,16 @@ body{
     font-style: italic;
   }
 
+  /* Button styling to save the name */
+
   #buttonout{
     display: flex;
     justify-content: center;
-    padding-top: 5vw ;
+    padding-top: 3vw ;
     animation: floating2 4s ease-in-out infinite;
   }
 
+  /* add keyframe in this floating animations */
   #button{
     background-color: rgba(29, 28, 27, 0.8);
     font-family: 'Dancing Script';
@@ -108,4 +120,66 @@ body{
     background-color: rgb(236, 217, 182,0.8);
     color: #1a1819;
     animation: none;
+  }
+
+
+/* To make it more responsive for mobile i have added media query at max width 600px ,
+and along with that in above codes also I have "vw" to giving size so they almost make these responsize
+to any of the mobile , tablet , laptops etc  */
+
+  @media(max-width:600px){
+
+    #gamename{
+      font-size: 16vw;
+      
+    }
+    #inputname{
+      font-size: 6vw;
+    }
+    #button{
+      font-size: 5vw;
+      width: 12vw;
+    }
+    #outer{
+      align-items: flex-start;
+    }
+    #main{
+      margin-top:25vw ;
+    }
+    #inputnametwo{
+      font-size: 6vw;
+    }
+  }
+
+  /* I forget to add nickname input so I have given 
+  it with id , other than id it will be easy with class */
+  
+  #inputnametwo{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    animation: floating2 4s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+  }
+
+  #nameentertwo{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    animation: floating2 4s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+  }
+
+  #nametwo{
+    border-radius: 8px 3px 8px 3px;
+    background-color: rgba(37, 33, 33, 0.5) ;
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: bisque;
+    font-style: italic;
   }

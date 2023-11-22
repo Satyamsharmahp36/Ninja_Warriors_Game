@@ -1,9 +1,17 @@
+
+/* importing font form google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+
+/* Setting background image for page */
+
 body{
     background-image: url('./srcImages/moon-purple.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* making a keyframe for animation */
 
 @keyframes floating2{
     0% {
@@ -17,7 +25,7 @@ body{
     }
   }
 
- 
+/* styling our headings and main div  */
 
 #main{
     display: flex;
@@ -38,7 +46,9 @@ body{
     
 }
 
-@-webkit-keyframes glow {
+/* taken this glow webkit keyframe from w3 schools but text  shadows are changed */
+
+@keyframes glow {
   from {
     text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
   }
@@ -49,6 +59,8 @@ body{
   
 }
 
+/* using floating2 keyframe for animaton here */
+ 
 #insthead{
     display: flex;
     justify-content: center;
@@ -59,6 +71,8 @@ body{
     font-size: 2.5vw;
     padding-bottom: 3vw;
 }
+
+/* using vw for giving size so that site become responsive for different displayed */
 
 #bottom{
     background-color: rgb(23, 10, 10,0.6);
@@ -74,6 +88,7 @@ body{
     font-size: 1.7vw;
     animation: floating2 3.5s ease-in-out infinite;
 }
+
 #start{
     display: flex;
     justify-content: center;
@@ -95,4 +110,28 @@ body{
     color: rgb(235, 240, 243);
     opacity: 200%;
     
+}
+
+/* media query at max width 600px for making it responsive for mobile */
+
+@media(max-width:600px){
+    #hiname{
+        font-size: 12vw;
+    }
+    #insthead{
+        font-size: 5vw;
+    }
+    #list{
+        font-size: 2.2vw;
+    }
+    #button{
+        font-size: 3vw;
+        width: 11.5vw;
+    }
+    #main{
+        align-items: flex-start;
+    }
+    #secondmain{
+        padding-top: 29vw;
+    }
 }
