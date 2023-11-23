@@ -1,0 +1,133 @@
+/* Importing font for google  */
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+
+body{
+    background-image: url('./srcImages/moon-purple.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97.5vh;
+}
+#heading{
+    
+    font-family: 'Dancing Script';
+    font-weight: 600;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 6px;
+    border-radius: 10px;
+    color: rgb(220, 251, 17);
+    text-align: center;
+    opacity: 200%;
+    padding-bottom: 4vw;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* taken this Glow keyframe  from W3 schools , but there is change in "form text shandow and to text shadow */
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
+    }
+  }
+
+/* making keyframe for animation  */
+
+  @keyframes floating2{
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+  }
+
+.shapename{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: rgb(245, 169, 18);
+    animation: floating2 4s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.shapeimg img{
+    width: 35vw;
+}
+.shapeimg{
+    background-color: black;
+    padding: 10px;
+    animation: floating2 4s ease-in-out infinite;
+    border-radius: 20px;
+    margin: 2.5vw;
+}
+
+#options{
+    display: flex;
+    justify-content: space-between;
+}
+
+#shapeone:hover{
+    background-color: rgb(183, 175, 175,0.7);
+    padding:1.5vw;
+    border-radius: 20px;
+    color: rgb(219, 15, 49);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#shapetwo:hover{
+    background-color: rgb(183, 175, 175,0.7);
+    padding:1.5vw;
+    border-radius: 20px;
+    color: rgb(235, 243, 16);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* making media query for mobile responsive */
+
+@media(max-width:600px){
+    #options{
+        display: block;
+    }
+    #shapetwo{
+        padding-top: 2vw;
+    }
+    #main{
+        align-items: flex-start;
+    }
+    .shapeimg img{
+        width: 50vw;
+    }
+    #heading{
+        font-size: 6vw;
+        padding-top: 12vw;
+    }
+    #shapeone , #shapetwo{
+        padding-top: 5vw;
+    }
+    .shapname{
+        font-size: 3vw;
+    }
+
+
+}

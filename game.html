@@ -2,60 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ball Ninja Javascript Game</title>
     <link rel="stylesheet" href="./style.css">
+
+    <!-- imported this link for google (font awesome cdn link) by cdnjs.com  -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
 <body>
+
+    <!-- first phone div is used for making it  mobile responsive -->
+
     <div id="firstphone">
     <div id="phone">
         PLEASE ROTATE YOUR PHONE
     </div>
     </div>
+
+    <!-- main div starts here -->
+
     <div id="main">
-    <!-- Game Heading -->
     <div class="gameHeading">
+
+    <!-- Below span is use ti update lives later no -->
+
         <p>Lives Remaining : <span id="liveremain">5</span></p>
     </div>
 
-    <!-- Main Canvas -->
-    <canvas id="canvas"></canvas>
+    <!-- Getting our Canvas tag-->
+    <canvas id="canvas">
+    </canvas>
 
-    <!-- Front Body -->
+    <!-- First User InterFace where user will start the game -->
+
     <div class="startGame" id="startGame">
         <div class="home">
-            <h1>BEST OF LUCK BUDDY<br> <span id="username">SATYAM SHARMA </span></h1>
-            <button id="startGameBtn">START <i class="fa-solid fa-gamepad"></i></button>
-            <p>Your High Score: <span id="homeHighScore"></span></p>
+
+    <!-- below span will be used to update username  -->
+
+            <h1>BEST OF LUCK BUDDY<br>
+                 <span id="username">Bhupender Jogi </span>
+            </h1>
+            <button id="startGameBtn">
+                START >
+            </button>
+
+    <!-- below span is user to update user high score form localStorage -->
+
+            <p>Your High Score:
+                 <span id="homeHighScore"></span>
+            </p>
         </div>
         
     </div>
 
-    <!-- Alert Count Down Timer  -->
-    <div class="countDown" id="countDownContainer">
+    <!-- this is our first timer which will direct us to game -->
+
+    <div class="firstTimer" id="timerone">
         <h1></h1>
     </div>
 
-    <!-- In Game Body -->
-    <div id="inGameContainer">
+    <!-- This is our main container of the game which will come after our 
+    above timer finishes , in this div our score ,time and game will work -->
+
+    <div id="mainContainer">
         <div class="scoreDiv">
+
+    <!-- below span are used to update score and high score respectivily -->
+
             <p class="work">Score: <span id="score"></span></p>
             <p  class="work">High Score: <span id="highScore"></span></p>
         </div>
+
+    <!-- our timer which will work in seconds  -->
+
         <div class="gameCountTime">
-            <h1 id="gameMinuteAndSecond">00 : 00</h1>
+            <h1 id="second"></h1>
         </div>
         <div id="strikeCountDiv">
             <h1 class="strikeCount">1x</h1>
         </div>
     </div>
 
+    <!-- this is our list div which will be displayed after game finishes -->
+
     <div id="gameEndDiv">
         <div class="gameEndContainer">
+
+    <!-- below span will show us our updated score -->
+
             <p>Your Score: <span id="endGameScore"></span></p>
-            <button id="returnHome">End Game <i class="fa-solid fa-right-to-bracket"></i></button>
+            <button id="endgame">End Game ></button>
         </div>
     </div>
 </div>

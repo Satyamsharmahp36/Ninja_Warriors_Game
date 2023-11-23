@@ -1,51 +1,8 @@
+/* importing font family from google fonts  */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    cursor: crosshair;
-}
 
-#canvas{
-    background-image: url('https://gifsec.com/wp-content/uploads/2022/10/happy-halloween-gif-17.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.startGame{
-    z-index: 1;
-    display: flex;
-    width: 100vw;
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    font-family: 'Poppins';
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(177, 203, 223);
-    background-image: url('https://i.pinimg.com/originals/50/cd/3b/50cd3bed5c4763ec64f5082010e9b09e.gif');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: white;
-}
-#startGame{
-    color: bisque;
-}
-
-
-
-.home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: floating1 3s ease-in-out infinite;
-}
+/* adding different keyframes for our different animations */
 
 @keyframes floating1{
     0% {
@@ -72,41 +29,119 @@ body{
     }
 }
 
+@keyframes transformationone {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2.2);
+    }
+}
 
-.home h1{
-    text-align: center;
+@keyframes increraseup {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2.5);
+    }
+}
+
+/* this glow webkit keyframe was taken from the w3 schools but text shadows is changed */
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
+    }
+    
+  }
+
+/* making background settings for our game page by giving properties to canvas */
+
+#canvas{
+    background-image: url('https://gifsec.com/wp-content/uploads/2022/10/happy-halloween-gif-17.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body{
     margin: 0;
-    line-height: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: crosshair;
 }
 
-.home h1 span{
-    font-size: 1.1rem;
-}
+/* first user interface styling  */
 
-#startGameBtn{
-    margin: 12px 0;
-    padding: 8px 16px;
-    color: rgb(37, 36, 36);
-    width: 40%;
-    background-color: rgb(44, 194, 228);
-    outline: none;
-    font-size: 22px;
-    font-family: 'Poppins';
-    font-weight: 800;
-    border-radius: 19px;
-    border: none;
-    cursor: pointer;
+.startGame{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    transition: .2s;
-    animation: floating2 3s ease-in-out infinite;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* adding top 0  gave us full scale view */
+    top: 0;
+    font-family: 'Dancing Script';
+    background-image: url('https://i.pinimg.com/originals/50/cd/3b/50cd3bed5c4763ec64f5082010e9b09e.gif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: rgb(239, 232, 232);
 }
+
+/* styling of our start button */
+
 .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgba(55, 53, 53, 0.622);
     padding: 10px;
     border-radius: 10px;
     font-family:cursive;
     padding-left: 10px;
     padding-right: 10px;
+    animation: floating1 3s ease-in-out infinite;
+}
+
+
+
+.home h1{
+    text-align: center;
+    margin: 0px;
+}
+
+.home h1 span{
+    font-size: 1.1rem;
+    font-family: 'Dancing Script';
+}
+
+/* start button styling */
+
+#startGameBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px ;
+    padding: 8px 16px;
+    color: rgb(37, 36, 36);
+    width: 40%;
+    background-color: rgb(44, 194, 228);
+    font-size: 22px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    border-radius: 18px 10px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    animation: floating2 3s ease-in-out infinite;
 }
 
 
@@ -116,9 +151,9 @@ body{
     font-weight: 900;
 }
 
+/* styling the first timer button */
 
-
-.countDown{
+.firstTimer{
     color: rgb(227, 219, 219);
     font-family: 'Poppins';
     position: absolute;
@@ -128,27 +163,19 @@ body{
     z-index: 13;
 }
 
-.countDown h1{
-    animation: animCount 8s linear ease-in;
+.firstTimer h1{
+    animation: transformationone 8s linear ease-in;
 }
 
-@keyframes animCount {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(2.2);
-    }
-}
+/* styling our game interface */
 
-#inGameContainer{
+#mainContainer{
+/* adding position absolute for correct positioning */
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
-    left: 0;
     background-color: transparent;
-    z-index: 10;
     color: rgb(28, 22, 16);
     box-sizing: border-box;
     pointer-events: none;
@@ -157,9 +184,11 @@ body{
     font-size: 18px;
 }
 
-#inGameContainer .gameCountTime{
+
+
+#mainContainer .gameCountTime{
     position: absolute;
-    top: 15px;
+    top: 5px;
     right: 10px;
 }
 .strikeCount{
@@ -178,19 +207,12 @@ body{
 }
 
 .strikeCount{
-    animation: animStrikeCount .2s linear;
+    animation: increraseup .2s linear;
     width: 45px;
     height: 45px;
 }
 
-@keyframes animStrikeCount {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(2.5);
-    }
-}
+
 
 .gameHeading{
     position: absolute;
@@ -237,28 +259,22 @@ body{
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.697);
     text-align: center;
     font-family: 'Poppins';
-    animation: floating1 3s ease-in-out infinite;
+    animation: floating1 2s ease-in-out infinite;
     
 }
 
 .gameEndContainer h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 .gameEndContainer p{
-    font-size: 22px;
+    font-size: 4vw;
 }
 
-.subscribe{
-    background-color: #FF0000;
-    padding: 2px 6px;
-    text-decoration: none;
-    color: white;
-    border-radius: 3px;
-}
+/* last interface styling */
 
-#returnHome{
+#endgame{
     background-color: transparent;
     border: none;
     outline: none;
@@ -268,56 +284,41 @@ body{
     cursor: pointer;
 }
 
+.work{
+    background-color: rgb(9, 3, 3,0.3);
+    color: bisque;
+    opacity: 200%;
+    padding: 5px;
+    border-radius: 12px 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-#firstphone{
+/* styling our timer */
+
+#second{
+    animation: glow 1s ease-in-out infinite alternate;
+    color: bisque;
+    background-color: rgb(28, 27, 25,0.6);
+    padding-left: 12px;
+    border-radius: 12px 5px;
+}
+
+
+#endgame{
+    color: bisque;
+    font-family: 'Dancing Script';
+    font-size: 3vw;
+}
+
+#endgame:hover{
+    animation: glow 1s ease-in-out infinite alternate;
+    color: gold;
+}
+#firstphone , #phone{
     display: none;
 }
 
-
-
-
-/* -----------------Bottom Github Source Code Link Styling ------------------------ */
-
-
-.sourceCodeLink{
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    width: 54px;
-    overflow: hidden;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 6px 8px;
-    border-radius: 55px;
-    transition: .2s;
-    color: rgb(199, 90, 90);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.sourceCodeLink img{
-    width: 55px;
-    border-radius: 50%;
-}
-
-.sourceCodeLink p{
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    margin: 0;
-    margin-left: 10px;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.sourceCodeLink:hover{
-    width: 222px;
-}
-
-#phone{
-    display: none;
-}
+/* adding responsiveness for mobile view */
 
 @media(max-width:600px){
     #phone{
@@ -349,40 +350,5 @@ body{
 
 
 
-.work{
-    background-color: rgb(9, 3, 3,0.3);
-    color: bisque;
-    opacity: 200%;
-    padding: 5px;
-    border-radius: 12px 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-#gameMinuteAndSecond{
-    animation: glow 1s ease-in-out infinite alternate;
-    color: bisque;
-    background-color: rgb(28, 27, 25,0.6);
-    padding-left: 12px;
-    border-radius: 12px 5px;
-}
-
-@-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
-    }
-    
-  }
-
-#returnHome{
-    color: bisque;
-    font-family: 'Dancing Script';
-}
-#returnHome:hover{
-    animation: glow 1s ease-in-out infinite alternate;
-    color: gold;
-}
 

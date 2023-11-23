@@ -14,7 +14,7 @@ username.innerHTML=nameuser;
 // directing to game page on clicking the button
 
 button.addEventListener('click',()=>{
-    location.href='game.html'
+    location.href='chooseshape.html'
 })
 
 // catching the audio and playing it on "onload"
