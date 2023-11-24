@@ -1,6 +1,6 @@
 
 //catching different elements from our game page
-
+let randomitem = document.getElementById('randomitem')
 var liveremaing =document.getElementById('liveremain')
 const playBtn = document.getElementById('startGameBtn');
 const startGameContainer = document.getElementById('startGame');
@@ -32,7 +32,6 @@ endgameButton.addEventListener('click',()=>{
 
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
-
 
 // const backgroundImage = new Image();
 // backgroundImage.src='https://i.pinimg.com/originals/50/cd/3b/50cd3bed5c4763ec64f5082010e9b09e.gif';

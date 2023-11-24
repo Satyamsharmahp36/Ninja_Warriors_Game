@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 90vw;
-    height: 97.5vh;
+    height: 98vh;
 }
 
 #secondmain{
@@ -61,7 +61,7 @@ body{
     font-family:'Dancing Script';
     font-size: 3vw;
     font-weight: 900;
-    padding-top: 12vw;
+    padding-top: 8vw;
     animation: floating1 3s ease-in-out infinite;
 }
 
@@ -136,6 +136,22 @@ body{
   right: 10px;
 }
 
+/* making styling of our random message */
+
+#rando{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vw;
+  animation: floating1 3s ease-in-out infinite;
+  color:rgb(218, 134, 33);
+  font-weight: 900;
+  font-family: 'Dancing Script';
+  font-size: 4vw;
+}
+
+
+
 /* media query for making it responsive */
 
 @media(max-width:600px){
@@ -154,4 +170,7 @@ body{
   #secondmain{
     padding-top: 29vw;
   }
+ 
 }
+
+
