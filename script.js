@@ -300,9 +300,9 @@ function blackshape() {
             //making styling of black ball
             context.fillStyle = this.color;
             context.beginPath();
-            context.lineWidth = 6;
             context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            context.strokeStyle = 'red';
+            context.lineWidth = 5;
+            context.strokeStyle = 'white';
             context.stroke();
             context.fill();
             // console.log("blackcircle")
