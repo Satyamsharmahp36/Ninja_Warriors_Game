@@ -38,7 +38,7 @@ body{
     color: rgb(226, 155, 68);
     font-family: 'Dancing Script';
     font-size: 5vw;
-    padding-bottom: 6vw;
+    padding-bottom: 4vw;
     display: flex;
     justify-content: center;
     font-weight: 700;
@@ -69,7 +69,7 @@ body{
     font-family:'Dancing Script';
     font-weight: 600;
     font-size: 2.5vw;
-    padding-bottom: 3vw;
+    padding-bottom: 1vw;
 }
 
 /* using vw for giving size so that site become responsive for different displayed */
@@ -107,7 +107,7 @@ body{
 }
 
 #list:hover{
-    color: rgb(235, 240, 243);
+    color: rgb(218, 238, 91);
     opacity: 200%;
     
 }

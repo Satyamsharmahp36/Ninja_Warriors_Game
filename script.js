@@ -33,6 +33,7 @@ endgameButton.addEventListener('click',()=>{
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
+
 // const backgroundImage = new Image();
 // backgroundImage.src='https://i.pinimg.com/originals/50/cd/3b/50cd3bed5c4763ec64f5082010e9b09e.gif';
 
@@ -122,7 +123,7 @@ const startGameTimer = () => {
         if (totalTime < 0 ||bomb==0) {
             //clearing interval
             clearInterval(interval);
-            document.getElementById('second').innerHTML = `000`;
+            document.getElementById('second').innerHTML = `GAME OVER`;
             //making endgamecontainer visible
             endGameContainer.style.display = 'flex';
             //update to score to game page
@@ -212,7 +213,7 @@ function Ball() {
 
     //rendering our shapes on the canvas
 
-console.log(check)
+// console.log(check)
 //so if we choose circle in (choose.html) then check will be true
 //and on the bases of that first condition of if statement will work
 //similarly in else the box shapes will be given
@@ -223,14 +224,14 @@ console.log(check)
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         context.fill();
-        console.log('circle')
+        // console.log('circle')
         }
         else{
             context.fillStyle = this.color;
             const width=80;
             const height=80;
             context.fillRect(this.x,this.y,width,height);
-            console.log('box')
+            // console.log('box')
         }
     }
 }
@@ -290,7 +291,7 @@ function blackshape() {
             this.speedY -= .1;
         }
     
-        console.log(check)
+        // console.log(check)
         //so if we choose circle in (choose.html) then check will be true
         //and on the bases of that first condition of if statement will work
         //similarly in else the box shapes will be given
@@ -305,7 +306,7 @@ function blackshape() {
             context.strokeStyle = 'red';
             context.stroke();
             context.fill();
-            console.log("blackcircle")
+            // console.log("blackcircle")
             }
             else{
             //making styling for black box
@@ -313,7 +314,7 @@ function blackshape() {
             const width=90;
             const height=90;
             context.fillRect(this.x,this.y,width,height);
-            console.log("blackBox")
+            // console.log("blackBox")
             }
         }
     }
@@ -435,7 +436,7 @@ function renderBallParticles() {
 //in this array below we have given random number which will further defines that 
 //how many balls are needed to be rendered at single time 
 
-let numberOfBallsToRender = [2, 1, 5, 4, 2, 1, 4, 1, 6, 3, 4, 1, 2, 3, 4, 1, 2, 4, 1, 2];
+let numberOfBallsToRender = [2, 1, 2, 3, 2, 1, 2, 1, 3, 3, 2, 1, 2, 3, 1, 1, 2, 2, 1, 2];
 
 //SetInterval to render the balls on an interval of 1 second
 
@@ -563,15 +564,12 @@ const updateScore = (presentscore) => {
 
 updateScore(0);
 
-//initialization for slice mouse effect 
-// let mouseX = 0;
-// let mouseY = 0;
-// let prevMouseX = 0;
-// let prevMouseY = 0;
-// let isMouseClicked = false;
+//initialization for slice mouse and touch effects 
 
-// let linesArray = [];
-
+//although here I have given "mouse" kind of variables and initialization 
+//because in many functions above i have given these keywords only so 
+// i will be using clicking or touching functions in if statement but
+//store those in same keywords and arrays only
 
 let prevMouseX = 0;
 let prevMouseY = 0;
@@ -579,6 +577,8 @@ let mouseX = 0;
 let mouseY = 0;
 let isMouseClicked = false;
 let linesArray = [];
+
+//function to make slice function active
 
 function renderMouseLines() {
     for (let i = 0; i < linesArray.length; i++) {
@@ -603,50 +603,73 @@ function renderMouseLines() {
     }
 }
 
-// //Event listener to detect when left button of mouse is clicked
 
-// canvas.addEventListener('mousedown', (e) => {
-//     prevMouseX = mouseX;
-//     prevMouseY = mouseY;
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-//     isMouseClicked = true;
-// })
+//here we that checking the screen width of the devices because in laptops and computer touch didin't work
+///where as in mobiles right click swap didn't works of after some recoginzation I concluded that devises
+//with width more than 1200px will take mouse inputs and devices below it are touch devices
 
-// //When mouse is moving
+var screenWidth = screen.width;
+console.log(screenWidth)
 
-// canvas.addEventListener('mousemove', (e) => {
-//     if (isMouseClicked) {
-//         prevMouseX = mouseX;
-//         prevMouseY = mouseY;
-//         mouseX = e.clientX;
-//         mouseY = e.clientY;
-//         linesArray.push({x: mouseX,y:mouseY,pMouseX: prevMouseX,pMouseY: prevMouseY})
-//     }
-// })
+//trying to change the width of screen in variable while onloading
+//but still we have to refresh it once to switch mode
 
-// //When the mouse button is released
+ function width(){
+    screenWidth=screen.width;
+    console.log('width working')
+    location.reload()
+ }
+ 
+//adding if statement for both devices
 
-// canvas.addEventListener('mouseup', () => {
-//     mouseX = 0;
-//     mouseY = 0;
-//     linesArray = [];
-//     isMouseClicked = false;
-// })
+if(screenWidth>1200){
 
-// //When the mouse is out of the tab or window
+    //this is for desktop mouse version
+    //so here are event listener to detect when left button of mouse is clicked
+ console.log('working for mouse')
+canvas.addEventListener('mousedown', (e) => {
+    prevMouseX = mouseX;
+    prevMouseY = mouseY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    isMouseClicked = true;
+})
 
-// canvas.addEventListener('mouseout', () => {
-//     mouseX = 0;
-//     linesArray = [];
-//     mouseY = 0;
-//     isMouseClicked = false;
-// })
+//When mouse is moving
 
+canvas.addEventListener('mousemove', (e) => {
+    if (isMouseClicked) {
+        prevMouseX = mouseX;
+        prevMouseY = mouseY;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        linesArray.push({x: mouseX,y:mouseY,pMouseX: prevMouseX,pMouseY: prevMouseY})
+    }
+})
 
+//When the mouse button is released
 
+canvas.addEventListener('mouseup', () => {
+    mouseX = 0;
+    mouseY = 0;
+    linesArray = [];
+    isMouseClicked = false;
+})
 
+//When the mouse is out of the tab or window
 
+canvas.addEventListener('mouseout', () => {
+    mouseX = 0;
+    linesArray = [];
+    mouseY = 0;
+    isMouseClicked = false;
+})
+}
+
+//this else statement is for touch response
+
+else{
+    console.log('working for touch')
 canvas.addEventListener('touchstart', (e) => {
     prevMouseX = mouseX;
     prevMouseY = mouseY;
@@ -678,6 +701,7 @@ canvas.addEventListener('touchcancel', () => {
     mouseY = 0;
     isMouseClicked = false;
 })
+}
 
 
 

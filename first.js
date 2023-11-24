@@ -2,7 +2,7 @@
 
 let button=document.getElementById('button');
 let game=document.getElementById('game');
-
+let userName=document.getElementById('name')
 
 // catching the audio using audio and its location 
 
@@ -15,11 +15,19 @@ const clicksound = new Audio('./Sound_Source/buttonclick.wave')
 
 //also add click sound onclicking button
 
+//ans also giving alert if name is not entered
+
 button.addEventListener('click',()=>{
-    let userName=document.getElementById('name').value;
-    localStorage.setItem('userName', userName)
-    location.href='instruction.html'
-    clicksound.play()
+    if(userName.value){
+        localStorage.setItem('userName', userName.value)
+        location.href='instruction.html'
+        clicksound.play()
+        console.log('entered')
+    }
+    else{
+        alert("Please enter some username")
+    }
+    
 })
 
 //adding a background sound on page whrn it loads
@@ -27,3 +35,4 @@ button.addEventListener('click',()=>{
 window.onload=()=>{
     backsoun.play()
 }
+

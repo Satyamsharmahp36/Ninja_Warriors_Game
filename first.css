@@ -1,9 +1,60 @@
 /* Importing font for google  */
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
 
+/* below are some keyframes which are used for animation further in the code */
+
+/* this glow webkit keyframe is taken from w3 schools , but text shadows are changed */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
+  }
+  
+}
+
+/* making some floating animations keyframes */
+
+@keyframes floating1{
+  0% {
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(12px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+
+@keyframes floating2{
+  0% {
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(9px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+@keyframes glowone {
+from {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ddd6da, 0 0 40px #b39ea9, 0 0 50px #c2afb9, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+to {
+  text-shadow: 0 0 20px #fff, 0 0 30px rgb(223, 209, 216), 0 0 40px #c4a8b6, 0 0 50px #b6a2ac, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+
 /* setting background image  */
 body{
-    background-image: url('./srcImages/giphy\ \(1\).gif');
+    background-image: url('./srcImages/moon-47.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -42,10 +93,11 @@ body{
     font-family: 'Dancing Script';
     display: flex;
     justify-content: center;
-    color: bisque;
+    color: #fbfcf7;
     animation: floating2 3s ease-in-out infinite;
     padding-bottom: 1vw;
     font-size: 3vw;
+    font-weight: 700;
   }
 
  /* add keyframe in this floating animations */
@@ -92,11 +144,49 @@ body{
   }
 
   #button:hover{
-    background-color: rgb(236, 217, 182,0.8);
+    background-color: rgba(240, 248, 5);
     color: #1a1819;
     animation: none;
   }
 
+  /* I forget to add nickname input so I have given 
+  it with id , other than id it will be easy with class */
+  
+  #inputnametwo{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: rgb(249, 242, 242);
+    animation: floating2 3s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+    font-weight: 700;
+  }
+
+  #nameentertwo{
+    font-family: 'Dancing Script';
+    display: flex;
+    justify-content: center;
+    color: bisque;
+    animation: floating2 3s ease-in-out infinite;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+  }
+
+  #nametwo{
+    border-radius: 8px 3px 8px 3px;
+    background-color: rgba(37, 33, 33, 0.5) ;
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: bisque;
+    font-style: italic;
+  }
+
+  #inputnamex , #inputnametwox{
+    animation: glowone 1s ease-in-out infinite alternate;
+
+  }
 
 /* To make it more responsive for mobile i have added media query at max width 600px ,
 and along with that in above codes also I have "vw" to giving size so they almost make these responsize
@@ -126,72 +216,5 @@ to any of the mobile , tablet , laptops etc  */
     }
   }
 
-  /* I forget to add nickname input so I have given 
-  it with id , other than id it will be easy with class */
-  
-  #inputnametwo{
-    font-family: 'Dancing Script';
-    display: flex;
-    justify-content: center;
-    color: bisque;
-    animation: floating2 3s ease-in-out infinite;
-    padding-bottom: 1vw;
-    font-size: 3vw;
-  }
-
-  #nameentertwo{
-    font-family: 'Dancing Script';
-    display: flex;
-    justify-content: center;
-    color: bisque;
-    animation: floating2 3s ease-in-out infinite;
-    padding-bottom: 1vw;
-    font-size: 3vw;
-  }
-
-  #nametwo{
-    border-radius: 8px 3px 8px 3px;
-    background-color: rgba(37, 33, 33, 0.5) ;
-    width: 15vw;
-    height: 3vw;
-    font-size: 2vw;
-    color: bisque;
-    font-style: italic;
-  }
 
   
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #332f2f, 0 0 20px #211e1e, 0 0 30px #3b3538, 0 0 40px #3f3c3d, 0 0 50px #1e1c1d, 0 0 60px #1c191a, 0 0 70px #241f22;
-    }
-    
-    to {
-      text-shadow: 0 0 20px #393030, 0 0 30px #443d41, 0 0 40px #eadde4, 0 0 50px #3c373a, 0 0 60px #201d1e, 0 0 70px #3d383b, 0 0 80px #1a1819;
-    }
-    
-  }
-
-  @keyframes floating1{
-    0% {
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(12px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes floating2{
-    0% {
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(9px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}

@@ -1,7 +1,7 @@
 /* importing font family from google fonts  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
 /* adding different keyframes for our different animations */
 
 @keyframes floating1{
@@ -63,7 +63,7 @@
 /* making background settings for our game page by giving properties to canvas */
 
 #canvas{
-    background-image: url('https://gifsec.com/wp-content/uploads/2022/10/happy-halloween-gif-17.gif');
+    background-image: url('./srcImages/giphy\ \(1\).gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -89,7 +89,7 @@ body{
     /* adding top 0  gave us full scale view */
     top: 0;
     font-family: 'Dancing Script';
-    background-image: url('https://i.pinimg.com/originals/50/cd/3b/50cd3bed5c4763ec64f5082010e9b09e.gif');
+    background-image: url('./srcImages/50cd3bed5c4763ec64f5082010e9b09e.gif');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
@@ -111,16 +111,18 @@ body{
     animation: floating1 3s ease-in-out infinite;
 }
 
-
-
 .home h1{
     text-align: center;
     margin: 0px;
 }
 
+#timerone{
+    font-size: 2vw;
+}
+
 .home h1 span{
-    font-size: 1.1rem;
-    font-family: 'Dancing Script';
+    font-size: 2.3vw;
+    font-family:'Dancing Script';
 }
 
 /* start button styling */
@@ -150,6 +152,7 @@ body{
     color: skyblue;
     font-weight: 900;
 }
+
 
 /* styling the first timer button */
 
@@ -344,8 +347,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
+    } 
 }
 
 
