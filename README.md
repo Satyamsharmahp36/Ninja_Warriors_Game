@@ -24,6 +24,13 @@ This Ninja Warriors game is build on the foundation of HTML which give necessary
 
 ![box shape](https://github.com/Satyamsharmahp36/Ninja_Warriors_Game/assets/138446502/84a1292b-9df9-4185-8db0-20225d5167ef)
 
+# Project
+
+[***Prototype Link***](https://www.figma.com/proto/DEJ0XDvhGiZz16t4bZo2Q5/Ball-Ninja-Cutting?page-id=0%3A1&type=design&node-id=1-3&viewport=269%2C149%2C0.22&t=0U7gg3L1gEwTyTvS-1&scaling=scale-down&starting-point-node-id=1%3A3&mode=design)
+
+[***Deployed Link***](https://satyamsharmahp36.github.io/Ninja_Warriors_Game/)
+
+
 # Credits
 
 ***Background Music:*** [Pixabay](https://pixabay.com)
