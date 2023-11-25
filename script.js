@@ -567,7 +567,7 @@ updateScore(0);
 
 //although here I have given "mouse" kind of variables and initialization 
 //because in many functions above i have given these keywords only so 
-// i will be using clicking or touching functions in if statement but
+// i will be using clicking or touching functions in (if/else) statement but
 //store those in same keywords and arrays only
 
 let prevMouseX = 0;
