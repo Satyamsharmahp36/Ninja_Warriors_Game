@@ -1,4 +1,9 @@
 # Ninja Warriors
+---
+
+![Leonardo_Phoenix_09_A_dynamic_and_actionpacked_poster_featurin_3](https://github.com/user-attachments/assets/c428765d-cb98-498c-93d4-5019c9c9ed59)
+
+---
 
 "Ninja Warriors" is an exhilarating game in which your quick reflexes and precision are put to the test as you slice through colorful shapes to score points with sleek ninja moves and a keen eye, you'll master the art of slicing while dodging the explosive obstacles which are black coloured shapes . If you slice bombs then your total score and lives will get decreased . So let's see , will you become the ultimate Ninja Warrior, by skillfully navigating through the chaos to claim victory .
 
